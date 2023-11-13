@@ -71,6 +71,7 @@ function display(array) {
         `;
   }
   rowData.innerHTML = str;
+   $(".loading").fadeOut(1500);
 }
 
 async function getSearchByName(search) {
