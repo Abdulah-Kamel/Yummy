@@ -184,11 +184,11 @@ async function ingredents() {
 }
 
 function displayIngredents(array) {
-  rowData.innerHTML = `<div
+  rowData.innerHTML = ``;
+  let str = `<div
   class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
   <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
 </div>`;
-  let str = ``;
   for (let i = 0; i < array.length; i++) {
     str += `
         <div class="col-md-3 my-5">
