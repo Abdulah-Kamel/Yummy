@@ -62,6 +62,10 @@ body {
   color: gray;
 }
 
+.container{
+  margin-rigth: 25px;
+}
+
 .loading{
   display: flex;
   z-index: 2;
