@@ -52,7 +52,10 @@ async function getCategory() {
 getCategory();
 
 function display(array) {
-  let str = ``;
+  let str = `<div
+  class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
+  <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+</div>`;
   for (let i = 0; i < array.length; i++) {
     str += `
         <div class="col-md-3 my-5">
@@ -220,10 +223,7 @@ async function getDetails(id) {
 
 function displayDetails(array) {
   console.log(array);
-  rowData.innerHTML = `<div
-  class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
-  <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
-</div>`;
+  rowData.innerHTML = ``;
   document.querySelector(".search-container").innerHTML = "";
   let ingredients = ``;
   for (let i = 1; i <= 20; i++) {
