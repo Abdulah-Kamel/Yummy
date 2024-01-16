@@ -41,8 +41,6 @@ function closeNav() {
 }
 let data = [];
 async function getCategory() {
-
-
   data = await fetch(
     "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
   );
@@ -105,7 +103,6 @@ function displaySearch(array) {
         `;
   }
   document.querySelector(".search-container").innerHTML = str;
-  $(".loading").fadeOut(1500);
 }
 
 function displaySrearch() {
@@ -127,13 +124,9 @@ async function categories() {
 
 function displayCategories(array) {
   rowData.innerHTML = "";
-  let str = `<div
-  class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
-  <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
-</div>`;
+  let str = ``;
   for (let i = 0; i < array.length; i++) {
     str += `
-    
         <div class="col-md-3 my-5">
                     <div class="meal position-relative overflow-hidden rounded-2" onclick="filterCaegory('${array[i].strCategory}')">
                         <div class="meal-img">
@@ -148,7 +141,6 @@ function displayCategories(array) {
         `;
   }
   rowData.innerHTML = str;
-  $(".loading").fadeOut(1500);
 }
 
 async function area() {
@@ -159,10 +151,7 @@ async function area() {
 
 function displayArea(array) {
   rowData.innerHTML = "";
-  let str = `<div
-  class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
-  <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
-</div>`;
+  let str = ``;
   for (let i = 0; i < array.length; i++) {
     str += `
         <div class="col-md-3 my-5">
@@ -174,7 +163,6 @@ function displayArea(array) {
         `;
   }
   rowData.innerHTML = str;
-  $(".loading").fadeOut(1500);
 }
 
 async function ingredents() {
@@ -184,11 +172,8 @@ async function ingredents() {
 }
 
 function displayIngredents(array) {
-  rowData.innerHTML = ``;
-  let str = `<div
-  class="loading w-100 h-100 position-absolute top-0 start-0 bg-black justify-content-center align-items-center">
-  <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
-</div>`;
+  rowData.innerHTML = "";
+  let str = ``;
   for (let i = 0; i < array.length; i++) {
     str += `
         <div class="col-md-3 my-5">
@@ -206,7 +191,6 @@ function displayIngredents(array) {
         `;
   }
   rowData.innerHTML = str;
-  $(".loading").fadeOut(1500);
 }
 
 async function getDetails(id) {
@@ -220,7 +204,7 @@ async function getDetails(id) {
 
 function displayDetails(array) {
   console.log(array);
-  rowData.innerHTML = ``;
+  rowData.innerHTML = "";
   document.querySelector(".search-container").innerHTML = "";
   let ingredients = ``;
   for (let i = 1; i <= 20; i++) {
@@ -230,6 +214,7 @@ function displayDetails(array) {
       } ${array[`strIngredient${i}`]}</li>`;
     }
   }
+  console.log(ingredients);
   let tags = array.strTags?.split(",");
   if (!tags) tags = [];
   let tagsStr = "";
@@ -264,7 +249,6 @@ function displayDetails(array) {
   </div>
   `;
   rowData.innerHTML = str;
-  $(".loading").fadeOut(1500);
 }
 
 async function filterCaegory(categ) {

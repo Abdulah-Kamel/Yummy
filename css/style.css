@@ -15,18 +15,18 @@ body {
 }
 /* NAV-BAR */
 .side-nav {
-  width: 400px;
+  width: 250px;
   z-index: 9999;
 }
 
 .side-nav .right {
   height: 100vh;
-  width: 20%;
+  width: 50px;
   left: 0;
 }
 
 .side-nav .hidden {
-  left: -400px;
+  right: 100%;
   height: 100vh;
   width: 100%;
   background-color: black;
@@ -62,11 +62,8 @@ body {
   color: gray;
 }
 
-.container{
-  margin-rigth: 25px;
-}
-
-.loading{
-  display: flex;
-  z-index: 2;
+@media screen and (max-width: 600px) {
+  .side-nav {
+    width: 80%;
+  }
 }
