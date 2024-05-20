@@ -58,7 +58,7 @@ function display(array) {
                         <div class="meal-img">
                             <img src="${array[i].strMealThumb}" alt="meals" class="w-100 rounded">
                         </div>
-                        <div class="meal-layer position-absolute top-100 rounded">
+                        <div class="meal-layer position-absolute top-100 rounded d-flex justify-content-center align-items-center">
                             <h3 class="my-5 py-5 px-4">${array[i].strMeal}</h3>
                         </div>
                     </div>
@@ -95,7 +95,7 @@ function displaySearch(array) {
                         <div class="meal-img">
                             <img src="${array[i].strMealThumb}" alt="meals" class="w-100 rounded">
                         </div>
-                        <div class="meal-layer position-absolute top-100 rounded">
+                        <div class="meal-layer position-absolute top-100 rounded d-flex justify-content-center align-items-center">
                             <h3 class="my-5 py-5 px-4">${array[i].strMeal}</h3>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ function displayCategories(array) {
                         <div class="meal-img">
                             <img src="${array[i].strCategoryThumb}" alt="meals" class="w-100 rounded">
                         </div>
-                        <div class="meal-layer position-absolute top-100 rounded text-center">
+                        <div class="meal-layer position-absolute top-100 rounded d-flex justify-content-center align-items-center text-center">
                             <h3>${array[i].strCategory}</h3>
                             <p>${array[i].strCategoryDescription}</p>
                         </div>
